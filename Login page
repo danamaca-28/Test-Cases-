@@ -1,0 +1,9 @@
+# Test Cases – Login Page
+
+| TC ID | Test Case Description                 | Precondition           | Test Steps                                                                 | Expected Result                                 | Status |
+|-------|----------------------------------------|------------------------|-----------------------------------------------------------------------------|--------------------------------------------------|--------|
+| TC01  | Login with valid credentials           | User is registered     | 1. Go to login page<br>2. Enter valid username & password<br>3. Click Login | User is redirected to profile page              | To Do |
+| TC02  | Login with invalid password            | User is registered     | 1. Go to login page<br>2. Enter valid username & wrong password<br>3. Click Login | Error message: "Invalid credentials"         | To Do |
+| TC03  | Login with empty fields                | —                      | 1. Go to login page<br>2. Leave all fields empty<br>3. Click Login          | Required field error messages are shown         | To Do |
+| TC04  | Login with invalid username format     | —                      | 1. Go to login page<br>2. Enter `123@!` as username<br>3. Click Login       | Error message or field validation warning shown | To Do |
+| TC05  | Check password field masking           | —                      | 1. Go to login page<br>2. Type in password field                            | Characters are masked (e.g. dots or asterisks)  | To Do |
