@@ -1,3 +1,9 @@
+| Test Case ID  | Descriere                                       | Pași de test                                                                                                    | Rezultat așteptat                                                                   |
+| ------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| TC-UI-Home-01 | Verificare link „Home” deschide un tab nou      | 1. Click pe linkul „Home” <br> 2. Verifică dacă s-a deschis un tab nou <br> 3. Verifică URL-ul tabului nou      | Se deschide un tab nou cu URL corect (ex: [https://demoqa.com](https://demoqa.com)) |
+| TC-UI-Home-02 | Verificare link „HomeF7bEA” deschide un tab nou | 1. Click pe linkul „HomeF7bEA” <br> 2. Verifică dacă s-a deschis un tab nou <br> 3. Verifică URL-ul tabului nou | Se deschide un tab nou cu URL corect (ex: [https://demoqa.com](https://demoqa.com)) |
+
+
 | Test Case ID   | Descriere                                  | Pași de test                                                              | Rezultat așteptat                                                        |
 | -------------- | ------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | TC-UI-Links-01 | Verificare link "Created" și mesaj UI      | 1. Click pe linkul "Created" <br> 2. Observă mesajul afișat pe ecran      | Mesaj: "Link has responded with status 201 and status text Created"      |
