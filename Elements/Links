@@ -1,0 +1,30 @@
+| Test Case ID   | Descriere                                  | Pași de test                                                              | Rezultat așteptat                                                        |
+| -------------- | ------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| TC-UI-Links-01 | Verificare link "Created" și mesaj UI      | 1. Click pe linkul "Created" <br> 2. Observă mesajul afișat pe ecran      | Mesaj: "Link has responded with status 201 and status text Created"      |
+| TC-UI-Links-02 | Verificare link "No Content" și mesaj UI   | 1. Click pe linkul "No Content" <br> 2. Observă mesajul afișat pe ecran   | Mesaj: "Link has responded with status 204 and status text No Content"   |
+| TC-UI-Links-03 | Verificare link "Moved" și mesaj UI        | 1. Click pe linkul "Moved" <br> 2. Observă mesajul afișat pe ecran        | Mesaj: "Link has responded with status 302 and status text Moved"        |
+| TC-UI-Links-04 | Verificare link "Bad Request" și mesaj UI  | 1. Click pe linkul "Bad Request" <br> 2. Observă mesajul afișat pe ecran  | Mesaj: "Link has responded with status 400 and status text Bad Request"  |
+| TC-UI-Links-05 | Verificare link "Unauthorized" și mesaj UI | 1. Click pe linkul "Unauthorized" <br> 2. Observă mesajul afișat pe ecran | Mesaj: "Link has responded with status 401 and status text Unauthorized" |
+| TC-UI-Links-06 | Verificare link "Forbidden" și mesaj UI    | 1. Click pe linkul "Forbidden" <br> 2. Observă mesajul afișat pe ecran    | Mesaj: "Link has responded with status 403 and status text Forbidden"    |
+| TC-UI-Links-07 | Verificare link "Not Found" și mesaj UI    | 1. Click pe linkul "Not Found" <br> 2. Observă mesajul afișat pe ecran    | Mesaj: "Link has responded with status 404 and status text Not Found"    |
+
+
+| Test Case ID    | Descriere                             | Pași de test                                            | Rezultat așteptat             |
+| --------------- | ------------------------------------- | ------------------------------------------------------- | ----------------------------- |
+| TC-API-Links-01 | Verificare răspuns API "Created"      | 1. Trimite GET request către endpoint-ul "Created"      | Răspuns HTTP 201 Created      |
+| TC-API-Links-02 | Verificare răspuns API "No Content"   | 1. Trimite GET request către endpoint-ul "No Content"   | Răspuns HTTP 204 No Content   |
+| TC-API-Links-03 | Verificare răspuns API "Moved"        | 1. Trimite GET request către endpoint-ul "Moved"        | Răspuns HTTP 302 Found        |
+| TC-API-Links-04 | Verificare răspuns API "Bad Request"  | 1. Trimite GET request către endpoint-ul "Bad Request"  | Răspuns HTTP 400 Bad Request  |
+| TC-API-Links-05 | Verificare răspuns API "Unauthorized" | 1. Trimite GET request către endpoint-ul "Unauthorized" | Răspuns HTTP 401 Unauthorized |
+| TC-API-Links-06 | Verificare răspuns API "Forbidden"    | 1. Trimite GET request către endpoint-ul "Forbidden"    | Răspuns HTTP 403 Forbidden    |
+| TC-API-Links-07 | Verificare răspuns API "Not Found"    | 1. Trimite GET request către endpoint-ul "Not Found"    | Răspuns HTTP 404 Not Found    |
+
+| Test Case ID  | Descriere                                      | Pași de test                                                              | Rezultat așteptat                                                           |
+| ------------- | ---------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| TC-UI-Edge-01 | Click rapid și repetat pe un link              | 1. Click rapid de 3-5 ori consecutiv pe linkul "Not Found"                | Aplicația nu se blochează, mesajul este consistent și corect afișat         |
+| TC-UI-Edge-02 | Click pe link când conexiunea este întreruptă  | 1. Dezactivează conexiunea de internet <br> 2. Click pe orice link de API | Se afișează mesaj de eroare de tip timeout sau conexiune eșuată, fără crash |
+| TC-UI-Edge-03 | Mesaj de răspuns prea lung / neașteptat        | Simulează un răspuns cu status text foarte lung sau cu caractere speciale | Mesajul se afișează complet sau este trunchiat corect, fără să strice UI-ul |
+| TC-UI-Neg-01  | Click pe un link inexistent în DOM             | Încearcă să execuți click pe un link care nu există (ex. selector greșit) | Se raportează o eroare clară, fără crash al aplicației                      |
+| TC-API-Neg-01 | Verificare răspuns API pentru endpoint nevalid | Trimite request către un endpoint care nu există                          | Răspuns HTTP 404 Not Found                                                  |
+| TC-API-Neg-02 | Trimite request cu metode HTTP nepermise       | Trimite POST pe endpoint care acceptă doar GET                            | Răspuns HTTP 405 Method Not Allowed                                         |
+| TC-API-Neg-03 | Testare răspuns timeout API                    | Simulează timeout (de ex. cu un proxy sau limitator de viteză)            | Clientul primește timeout și gestionează corespunzător                      |
