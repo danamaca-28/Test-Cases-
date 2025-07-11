@@ -1,0 +1,31 @@
+Title:
+Add a book to the Book Store for a newly created user
+
+Preconditions:
+Access to the DemoQA Book Store API
+A newly created user with a valid username and password
+
+Steps:
+
+Create a new user via the endpoint POST https://demoqa.com/Account/v1/User with username and password.
+Generate a token for the user via the endpoint POST https://demoqa.com/Account/v1/GenerateToken using the same credentials.
+Add a book to the user’s account via the endpoint POST https://demoqa.com/BookStore/v1/Books using the generated token and the userId received during user creation.
+Verify the response status is 201 Created.
+
+Make a GET https://demoqa.com/Account/v1/User/{userId} request to confirm that the user's book list contains the added book.
+
+Test Data:
+
+Username	Password	Book ISBN
+testuser123	StrongPass!123	9781449331818 (Example)
+
+Expected Results:
+
+User is successfully created (status 201 or 200).
+Token is successfully generated (status 200 and valid token in response).
+Book is successfully added (status 201).
+User’s book list includes the added book.
+
+Notes:
+All requests must include the header Content-Type: application/json.
+The book addition request must include the header Authorization: Bearer <token>.
