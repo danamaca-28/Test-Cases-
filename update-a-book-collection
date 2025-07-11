@@ -1,0 +1,30 @@
+Test Case: Update Book for a User (PUT Request)
+Title:
+Update a book in the user’s Book Store collection using PUT API
+
+Preconditions:
+
+Access to DemoQA Book Store API
+A valid user created with username and password
+Valid token generated for the user
+At least one book already added to the user’s collection
+Test Steps:
+
+Create a user via POST https://demoqa.com/Account/v1/User with valid username and password.
+Generate an authentication token for that user via POST https://demoqa.com/Account/v1/GenerateToken.
+Add a book to the user’s account via POST https://demoqa.com/BookStore/v1/Books using the token and userId.
+Send a PUT request to https://demoqa.com/BookStore/v1/Books with the userId and book details to update the book information. Include Authorization header with the token.
+Verify the HTTP response status code and response message.
+Test Data:
+
+Field	Value
+Username	USERTEST123
+Password	StrongPass123!
+Book ISBN	9781449331818 (example book)
+Expected Results:
+
+User is created successfully (status 201).
+Token is generated successfully (status 200).
+Book is added successfully (status 201).
+PUT request returns success or appropriate response (usually 200 or 204).
+Book information is updated accordingly.
