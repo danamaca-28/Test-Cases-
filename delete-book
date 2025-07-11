@@ -13,7 +13,7 @@ Steps
 Authenticate the user via POST https://demoqa.com/Account/v1/GenerateToken and get the token.
 Ensure the book 9781449331818 is already in the user’s account (manually or via API).
 Send a DELETE request to https://demoqa.com/BookStore/v1/Book with:
-Authorization header: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVTRVJURVNUMTIzIiwicGFzc3dvcmQiOiJTdHJvbmdQYXNzMTIzNDUhIiwiaWF0IjoxNzUyMjM5NzQzfQ.4gM6hO1n5vAgZYZHjSKG6qRQ9aE93Xf7tDSDCYFPJsA>
+Authorization header: Bearer <eyJhbGciO.......>
 Body:
 {
   "isbn": "9781449331818",
