@@ -1,0 +1,29 @@
+Title
+Delete a book from the Book Store for an existing user
+
+Preconditions
+
+Access to the DemoQA Book Store API
+A valid user created with username and password
+A valid token generated via /GenerateToken
+At least one book added to the user’s account
+
+Steps
+
+Authenticate the user via POST https://demoqa.com/Account/v1/GenerateToken and get the token.
+Ensure the book 9781449331818 is already in the user’s account (manually or via API).
+Send a DELETE request to https://demoqa.com/BookStore/v1/Book with:
+Authorization header: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlVTRVJURVNUMTIzIiwicGFzc3dvcmQiOiJTdHJvbmdQYXNzMTIzNDUhIiwiaWF0IjoxNzUyMjM5NzQzfQ.4gM6hO1n5vAgZYZHjSKG6qRQ9aE93Xf7tDSDCYFPJsA>
+Body:
+{
+  "isbn": "9781449331818",
+  "userId": "<0f2b2c56-6666-4cdb-92b5-2e26397b4e42>"
+}
+Verify the status code is 204 No Content.
+Make a GET request to /Account/v1/User/{userId} to ensure the book is no longer listed.
+Test Data
+Username	Password	ISBN
+USERTEST123	StrongPass123!	9781449331818
+Expected Results
+The DELETE request returns 204.
+The user’s book list no longer contains the deleted book.
