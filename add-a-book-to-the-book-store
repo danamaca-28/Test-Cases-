@@ -17,7 +17,7 @@ Make a GET https://demoqa.com/Account/v1/User/{userId} request to confirm that t
 Test Data:
 
 Username	Password	Book ISBN
-testuser123	StrongPass!123	9781449331818 (Example)
+USERTEST123	StrongPass123!	9781449331818 (Example)
 
 Expected Results:
 
